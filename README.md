@@ -9,7 +9,7 @@ demo-https://vikastestapi.onrender.com/api/post
 
 ## Posts
 
-- **Get All Posts**: `/api/posts` (GET)
+- **Get All Posts**: `/api/post` (GET)
 - **Get Post by ID**: `/api/post/:id` (GET)
 - **Add post**: `/api/post/add` (POST)
 - **Update Post by ID**: `/api/post/:id` (PUT)
