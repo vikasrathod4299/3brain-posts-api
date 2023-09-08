@@ -11,6 +11,7 @@ demo-https://vikastestapi.onrender.com/api/post
 
 - **Get All Posts**: `/api/posts` (GET)
 - **Get Post by ID**: `/api/post/:id` (GET)
+- **Add post**: `/api/post/add` (POST)
 - **Update Post by ID**: `/api/post/:id` (PUT)
 - **Delete Post by ID**: `/api/post/:id` (DELETE)
 
