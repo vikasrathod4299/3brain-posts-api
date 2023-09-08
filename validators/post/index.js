@@ -14,6 +14,7 @@ const postSchema = z.object({
       .min(1, "Tag altest have one charecter")
       .max(20, "Tag is log long")
   ),
+  banner: z.string(),
 });
 
 const postIdSchema = z.object({

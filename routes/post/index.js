@@ -47,7 +47,6 @@ router.get("/:id", paramsvalidation(postIdSchema), async (req, res) => {
 router.post("/add", bodyValidation(postSchema), async (req, res) => {
   const post = req.body;
   const user = req.user;
-
   try {
     const newPost = new Post({
       title: post.title,
@@ -66,7 +65,7 @@ router.post("/add", bodyValidation(postSchema), async (req, res) => {
 
 //Update post by ID
 router.put("/update/:id", paramsvalidation(postIdSchema), async (req, res) => {
-  const { id } = erq.params;
+  const { id } = req.params;
   const post = req.body;
 
   try {
