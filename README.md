@@ -1,5 +1,4 @@
 # 3brain-posts-api
-# My API Documentation
 
 ## Authentication
 
