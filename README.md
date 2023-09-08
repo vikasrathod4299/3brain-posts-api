@@ -1,5 +1,7 @@
 # 3brain-posts-api
 
+demo-https://vikastestapi.onrender.com/api/post
+
 ## Authentication
 
 - **Login**: `/api/auth/login` (POST)
