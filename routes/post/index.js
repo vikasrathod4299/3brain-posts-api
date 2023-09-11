@@ -75,8 +75,8 @@ router.post(
       const imageUrl = `${
         process.env.NODE_ENV === "development"
           ? `http://localhost:${process.env.PORT}`
-          : `https://vikastestapi.onrender.com/`
-      }uploads/${fileName}`;
+          : `https://vikastestapi.onrender.com`
+      }/uploads/${fileName}`;
 
       res.json({ imageUrl });
     });
