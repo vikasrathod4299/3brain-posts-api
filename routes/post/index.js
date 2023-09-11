@@ -16,7 +16,7 @@ const upload = multer({ storage });
 router.use(verifyToken);
 
 //get all posts and get post by Id
-router.get("/:id", async (req, res) => {
+router.get("/:id?", async (req, res) => {
   const { id } = req.params;
   let posts;
   try {
