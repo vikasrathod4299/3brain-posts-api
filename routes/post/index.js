@@ -10,33 +10,22 @@ const { postSchema, postIdSchema } = require("../../validators/post");
 router.use(verifyToken);
 
 //get all posts
-router.get("/", async (req, res) => {
-  try {
-    const posts = await Post.find().populate({
-      path: "author",
-      select: "username -_id",
-    });
-    res.status(200).json(posts);
-  } catch (err) {
-    console.log(err);
-    res.status(500).json("Somthing went wrong!");
-  }
-});
-
-//get post by ID
-router.get("/:id", paramsvalidation(postIdSchema), async (req, res) => {
+router.get("/:id", async (req, res) => {
   const { id } = req.params;
-
+  let posts;
   try {
-    const post = await Post.findById(id).populate({
-      path: "author",
-      select: "username -_id",
-    });
-    if (post) {
-      res.status(200).json(post);
+    if (id) {
+      posts = await Post.findById(id).populate({
+        path: "author",
+        select: "username -_id",
+      });
     } else {
-      res.status(404).json("Post not found!");
+      posts = await Post.find().populate({
+        path: "author",
+        select: "username -_id",
+      });
     }
+    res.status(200).json(posts);
   } catch (err) {
     console.log(err);
     res.status(500).json("Somthing went wrong!");
